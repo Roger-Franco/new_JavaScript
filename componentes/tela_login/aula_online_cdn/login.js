@@ -181,3 +181,10 @@ class Login {
 }
 
 // export {Login}
+
+
+// https://cdn.jsdelivr.net/gh/jquery/jquery/
+
+https://github.com/Roger-Franco/new_JavaScript/blob/main/componentes/tela_login/aula_online_cdn/login.js
+
+https://cdn.jsdelivr.net/gh/Roger-Franco/new_JavaScript/componentes/tela_login/aula_online_cdn/login.js
