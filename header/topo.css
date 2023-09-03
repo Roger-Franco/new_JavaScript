@@ -1,0 +1,13 @@
+* {
+  /* background-color: #0ff; */
+}
+.topo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f00;
+}
+
+.logo img{
+  width: 200px;
+}
