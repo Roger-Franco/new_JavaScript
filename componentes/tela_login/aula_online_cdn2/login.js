@@ -15,9 +15,11 @@ class Login {
   // https://login-javascript.rogerfranco.repl.co/?matricula=123&senha=321
 
   static login = (callback_ok, callback_nao_ok, config) => {
-    if(config != null) {
-      this.config = config;
-    }
+    sessionStorage.setItem("logado", 'false');
+    sessionStorage.setItem("matLogado", "");
+    sessionStorage.setItem("nomeLogado", "");
+    sessionStorage.setItem("acessoLogado", "");
+    this.config = config;
     // this.endpoint += `?matricula=${mat}&senha=${pas}`
     this.callback_ok = () => {callback_ok()}
     this.callback_nao_ok = () => {callback_nao_ok()}
@@ -101,6 +103,10 @@ class Login {
     btn_cancelar.setAttribute('id', 'btn_cancelar')
     btn_cancelar.innerHTML = "Cancelar"
     btn_cancelar.addEventListener('click', (evt) => {
+      sessionStorage.setItem("logado", 'false');
+      sessionStorage.setItem("matLogado", "");
+      sessionStorage.setItem("nomeLogado", "");
+      sessionStorage.setItem("acessoLogado", "");
       this.fechar()
     })
     botoesLogin.appendChild(btn_cancelar)
@@ -147,7 +153,7 @@ class Login {
       console.log(res)
       if(res) {
         console.log('Aqui no res')
-        sessionStorage.setItem("logado", true);
+        sessionStorage.setItem("logado", 'true');
         sessionStorage.setItem("matLogado", mat);
         sessionStorage.setItem("nomeLogado", res.nome);
         sessionStorage.setItem("acessoLogado", res.acesso);
@@ -156,7 +162,7 @@ class Login {
         console.log(sessionStorage)
         this.fechar()
       } else {
-        sessionStorage.setItem("logado", false);
+        sessionStorage.setItem("logado", 'false');
         sessionStorage.setItem("matLogado", "");
         sessionStorage.setItem("nomeLogado", "");
         sessionStorage.setItem("acessoLogado", "");
