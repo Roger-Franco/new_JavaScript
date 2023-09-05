@@ -26,3 +26,21 @@ https://github.com/Roger-Franco/new_JavaScript/blob/main/componentes/tela_login/
 https://cdn.jsdelivr.net/gh/Roger-Franco/new_JavaScript/componentes/tela_login/aula_online_cdn/login.js  => Junção do CDN e o link do Github
 
 =================================================================
+Fake API: json-server
+
+https://github.com/typicode/json-server
+
+método: GET ALL
+  fetch("http://localhost:3000/produtos")
+  .then(res => res.json())
+  .then(res => console.log(res))
+
+
+método: DELETE
+const id = evt.target.parentNode.parentNode.firstChild.innerHTML
+const endpoint = `http://localhost:3000/produtos/${id}`
+      fetch(endpoint, {
+      method: "DELETE",
+      ContentType: 'application/json'
+      // body: JSON.stringify(dados)
+  })
