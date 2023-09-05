@@ -70,6 +70,25 @@ const dataGridView = (configDataGridView) => {
     const imgExibir = document.createElement('img')
     imgExibir.setAttribute('class', 'dgvIcone')
     imgExibir.setAttribute('src', 'exibir.svg')
+    imgExibir.addEventListener('click', (evt) => {
+      document.querySelector('.janelaView').classList.remove('ocultar')
+      const id = evt.target.parentNode.parentNode.firstChild.innerHTML
+      const endpoint = `http://localhost:3000/produtos/${id}`
+      fetch(endpoint)
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('f_id').value = res.id
+        document.getElementById('f_produto').value = res.produto
+        document.getElementById('f_marca').value = res.marca
+        document.getElementById('f_modelo').value = res.modelo
+        console.log(res)
+      })
+  //     fetch(endpoint, {
+  //     method: "GET",
+  //     ContentType: 'application/json'
+  //     // body: JSON.stringify(dados)
+  // })
+    })
     c5.appendChild(imgExibir)
 
     dgvDados.appendChild(dgvLinha)
@@ -78,3 +97,7 @@ const dataGridView = (configDataGridView) => {
   })
 }
 dataGridView(configDataGridView)
+
+document.querySelector('#btn_ok').addEventListener('click', (evt) => {
+  document.querySelector('.janelaView').classList.add('ocultar')
+})

@@ -44,3 +44,5 @@ const endpoint = `http://localhost:3000/produtos/${id}`
       ContentType: 'application/json'
       // body: JSON.stringify(dados)
   })
+
+  https://www.youtube.com/watch?v=meLt7dHsw4c&list=PLx4x_zx8csUg_AxxbVWHEyAJ6cBdsYc0T&index=163
