@@ -54,6 +54,12 @@
   cursor: pointer;
 }
 
+.coluna {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
 .c1{
   width: 50px;
 }
@@ -72,4 +78,9 @@
 
 .c5{
   width: 100px;
+  justify-content: space-around !important;
+}
+
+.dgvIcone {
+  width: 20px;
 }
