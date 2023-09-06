@@ -50,21 +50,53 @@ const dataGridView = (configDataGridView) => {
       fetch(endpoint, {
       method: "DELETE",
       ContentType: 'application/json'
-      // body: JSON.stringify(dados)
   })
-  // .then((res) => {
-  //   if(res.status==200){
-  //     linha.remove()
-  //   }
-  // })
-      // console.log(evt.target)
-      // console.log(evt.target.parentNode.parentNode.firstChild.innerHTML)
     })
     c5.appendChild(imgDelete)
 
     const imgEditar = document.createElement('img')
     imgEditar.setAttribute('class', 'dgvIcone')
     imgEditar.setAttribute('src', 'editar.svg')
+    imgEditar.addEventListener('click', (evt) => {
+      document.querySelector('#janelaEditar').classList.remove('ocultar')
+      const id = evt.target.parentNode.parentNode.firstChild.innerHTML
+      const endpoint = `http://localhost:3000/produtos/${id}`
+      fetch(endpoint)
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('f_idEditar').value = res.id
+        document.getElementById('f_produtoEditar').value = res.produto
+        document.getElementById('f_marcaEditar').value = res.marca
+        document.getElementById('f_modeloEditar').value = res.modelo
+        console.log(res)
+        console.log(document.getElementById('f_modeloEditar'), 'document.getElement')
+      })
+    const btn_editar = document.getElementById('btn_gravar')
+    btn_editar.addEventListener('click', async (evt) => {
+      const dados = {
+        'id': document.getElementById('f_idEditar').value,
+        'produto': document.getElementById('f_produtoEditar').value,
+        'marca': document.getElementById('f_marcaEditar').value,
+        'modelo': document.getElementById('f_modeloEditar').value
+      }
+      console.log(dados, 'dados2')
+      const endpoint = `http://localhost:3000/produtos/${id}`
+      const options = {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dados)
+    }
+      const response = await fetch(endpoint, options)
+      // alert(response)
+      return response
+    })
+    document.querySelector('#btn_cancelar').addEventListener('click', (evt) => {
+      document.querySelector('#janelaEditar').classList.add('ocultar')
+    })
+  })
+
     c5.appendChild(imgEditar)
 
     const imgExibir = document.createElement('img')

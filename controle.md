@@ -28,6 +28,8 @@ https://cdn.jsdelivr.net/gh/Roger-Franco/new_JavaScript/componentes/tela_login/a
 =================================================================
 Fake API: json-server
 
+json-server --watch db.json
+
 https://github.com/typicode/json-server
 
 método: GET ALL

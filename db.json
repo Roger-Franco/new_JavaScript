@@ -15,22 +15,34 @@
   ],
   "produtos": [
     {
-      "id": 1,
+      "id": "01",
       "produto": "Processador",
       "marca": "Intel",
-      "modelo": "i7"
+      "modelo": "I7"
     },
     {
-      "id": 3,
+      "id": "02",
+      "produto": "Mouse",
+      "marca": "Logitech",
+      "modelo": "m90"
+    },
+    {
+      "id": "03",
       "produto": "Monitor",
       "marca": "Sansung",
       "modelo": "Syncmaster"
     },
     {
-      "id": 4,
-      "produto": "Impressora",
+      "id": "04",
+      "produto": "Imporessora",
       "marca": "HP",
       "modelo": "P1005"
+    },
+    {
+      "id": "05",
+      "produto": "Drone",
+      "marca": "DJI",
+      "modelo": "Mini 3 Pro"
     }
   ],
   "profile": {
