@@ -6,3 +6,38 @@ const btn_pesquisar = document.querySelector('#btn_pesquisar')
 const btn_gestao = document.querySelector('#btn_gestao')
 const btn_sobre = document.querySelector('#btn_sobre')
 const principal = document.querySelector('#principal')
+
+btn_home?.addEventListener('click', (evt) => {
+  // console.log(evt.target)
+  selecionarAba(evt.target)
+  window.open('./home.html', 'if_principal')
+})
+
+btn_novo?.addEventListener('click', (evt) => {
+  selecionarAba(evt.target)
+  window.open('./novo.html', 'if_principal')
+})
+
+btn_pesquisar?.addEventListener('click', (evt) => {
+  selecionarAba(evt.target)
+  window.open('./pesquisar.html', 'if_principal')
+})
+
+btn_gestao?.addEventListener('click', (evt) => {
+  selecionarAba(evt.target)
+  window.open('./gestao.html', 'if_principal')
+})
+
+btn_sobre?.addEventListener('click', (evt) => {
+  selecionarAba(evt.target)
+  window.open('./sobre.html', 'if_principal')
+})
+
+const selecionarAba = (el) => {
+  const abas = [...document.querySelectorAll('.aba')]; // NodeList para Array
+  console.log(abas)
+  abas.forEach((e) => {
+    e.classList.remove('abaSelecionada')
+  })
+  el.classList.add('abaSelecionada')
+}
