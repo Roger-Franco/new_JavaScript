@@ -30,7 +30,7 @@ btn_sobre?.addEventListener('click', (evt) => {
 
 const abrirPagina = (el, url) => {
   const abas = [...document.querySelectorAll('.aba')]; // NodeList para Array
-  console.log(abas)
+  // console.log(abas)
   abas.forEach((e) => {
     e.classList.remove('abaSelecionada')
   })
