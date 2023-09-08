@@ -13,6 +13,22 @@
       "postId": 1
     }
   ],
+  "agendas": [
+    {
+      "id": 1,
+      "nome": "Roger Frank",
+      "celular": "(00) 0000-0000",
+      "email": "roger@roger.com",
+      "date": "23/07/1992"
+    },
+    {
+      "id": 1,
+      "nome": "Batman",
+      "celular": "(xx) xxxx-xxxx",
+      "email": "batman@batman.com",
+      "date": "12/07/1988"
+    }
+  ],
   "produtos": [
     {
       "id": "01",
