@@ -24,11 +24,24 @@ btn_gravar.addEventListener('click', (evt) => {
   fetch(endpoint, options)
   .then(res => {
     // evt.preventDefault()
-    console.log(res), 'res'
+    // console.log(res, 'res')
     if(res.status == 201) {
+      // reset()
       console.log("OK")
     } else {
       alert('Erro ao gravar novo contato')
     }
   })
 })
+
+btn_cancelar.addEventListener('click', (evt) => {
+  reset()
+})
+
+const reset = () => {
+  f_nome.value = '';
+  f_celular.value = '';
+  f_email.value = '';
+  f_dtnasc.value = '';
+  f_nome.focus();
+}
