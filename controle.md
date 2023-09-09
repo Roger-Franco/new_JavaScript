@@ -47,4 +47,27 @@ const endpoint = `http://localhost:3000/produtos/${id}`
       // body: JSON.stringify(dados)
   })
 
-  https://www.youtube.com/watch?v=meLt7dHsw4c&list=PLx4x_zx8csUg_AxxbVWHEyAJ6cBdsYc0T&index=163
+
+método: POST
+const dados = {
+    'nome': f_nome.value,
+    'celular': f_celular.value,
+    'email': f_email.value,
+    'date': f_dtnasc.value,
+  }
+  const options = {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dados)
+}
+const endpoint = 'http://localhost:3000/agendas'
+  fetch(endpoint, options)
+  .then(res => {
+    if(res.status == 201) {
+      console.log("OK")
+    } else {
+      alert('Erro ao gravar novo contato')
+    }
+  })
