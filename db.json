@@ -29,13 +29,6 @@
       "date": "12/07/1988"
     },
     {
-      "nome": "thu",
-      "celular": "1232",
-      "email": "fdmfl;ff",
-      "date": "3343",
-      "id": 2
-    },
-    {
       "nome": "thu2",
       "celular": "432323",
       "email": "thuthuthu",
@@ -90,34 +83,6 @@
       "email": "ggrg",
       "date": "rgeger",
       "id": 10
-    },
-    {
-      "nome": "wewq",
-      "celular": "232",
-      "email": "ewe4",
-      "date": "34543",
-      "id": 11
-    },
-    {
-      "nome": "weew",
-      "celular": "sddas",
-      "email": "wewqe",
-      "date": "wwqew",
-      "id": 12
-    },
-    {
-      "nome": "221",
-      "celular": "232",
-      "email": "32323",
-      "date": "423",
-      "id": 13
-    },
-    {
-      "nome": "ewre",
-      "celular": "rer",
-      "email": "rre",
-      "date": "rre",
-      "id": 14
     }
   ],
   "produtos": [
