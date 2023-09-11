@@ -1,4 +1,20 @@
 const dados = document.querySelector('#dados')
+const fundopopup = document.querySelector('#fundopopup')
+const btn_gravar = document.querySelector('#btn_gravar')
+const btn_cancelar = document.querySelector('#btn_cancelar')
+const f_id = document.querySelector('#f_id')
+const f_nome = document.querySelector('#f_nome')
+const f_celular = document.querySelector('#f_celular')
+const f_email = document.querySelector('#f_email')
+const f_dtnasc = document.querySelector('#f_dtnasc')
+
+btn_gravar.addEventListener('click', (evt) => {
+  fundopopup.classList.add('ocultar')
+})
+
+btn_cancelar.addEventListener('click', (evt) => {
+  fundopopup.classList.add('ocultar')
+})
 
 const preencherDataGridView = () => {
   dados.innerHTML = "";
@@ -48,10 +64,14 @@ const preencherDataGridView = () => {
         const id = evt.target.parentNode.parentNode.firstChild.innerHTML;
         removerContato(id)
       })
-
       const img_editar = document.createElement('img')
       img_editar.setAttribute('src', './imgs/editar.svg')
       img_editar.setAttribute('class', 'icone_comando')
+      img_editar.addEventListener('click', (evt) => {
+        fundopopup.classList.remove('ocultar')
+        // console.log(evt.target.parentNode.parentNode.childNodes)
+        const dados = evt.target.parentNode.parentNode.childNodes
+      })
       c6.appendChild(img_delete)
       c6.appendChild(img_editar)
       linha.appendChild(c6)

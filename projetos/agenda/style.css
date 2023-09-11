@@ -5,6 +5,14 @@
   box-sizing:border-box;
 }
 
+/* AUXILIARES */
+
+.ocultar{
+  display: none !important;
+}
+
+/* ================= */
+
 .cabecalho {
   display: flex;
   justify-content: center;
@@ -219,6 +227,62 @@ label{
   width: 30%;
   cursor: pointer;
 }
+
+/* ==================== */
+
+/* POPUP */
+
+.fundopopup{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.janelapopup{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 500px;
+}
+
+.titulopopup{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #248;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px 5px 0px 0px;
+  width: inherit;
+}
+
+.principalpopup{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: inherit;
+  background-color: #ddd;
+  padding: 5px;
+}
+
+.rodapepopup{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: inherit;
+  background-color: #aaa;
+  /* padding: 5px; */
+  border-radius: 0px 0px 5px 5px;
+}
+
 
 
 /* ==================== */
