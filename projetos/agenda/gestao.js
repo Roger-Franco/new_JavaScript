@@ -10,6 +10,13 @@ const f_dtnasc = document.querySelector('#f_dtnasc')
 
 btn_gravar.addEventListener('click', (evt) => {
   fundopopup.classList.add('ocultar')
+  console.log(f_id.value, 'ID')
+  console.log(f_nome.value, 'Nome')
+  // f_id.value = dados[0].innerHTML
+  // f_nome.value = dados[1].innerHTML
+  // f_celular.value = dados[2].innerHTML
+  // f_email.value = dados[3].innerHTML
+  // f_dtnasc.value = dados[4].innerHTML
 })
 
 btn_cancelar.addEventListener('click', (evt) => {
@@ -70,7 +77,14 @@ const preencherDataGridView = () => {
       img_editar.addEventListener('click', (evt) => {
         fundopopup.classList.remove('ocultar')
         // console.log(evt.target.parentNode.parentNode.childNodes)
-        const dados = evt.target.parentNode.parentNode.childNodes
+        const dados = evt.target.parentNode.parentNode.childNodes;
+        // const dados = [...evt.target.parentNode.parentNode.childNodes];
+        console.log(dados)
+        f_id.value = dados[0].innerHTML
+        f_nome.value = dados[1].innerHTML
+        f_celular.value = dados[2].innerHTML
+        f_email.value = dados[3].innerHTML
+        f_dtnasc.value = dados[4].innerHTML
       })
       c6.appendChild(img_delete)
       c6.appendChild(img_editar)
