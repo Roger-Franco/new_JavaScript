@@ -71,3 +71,23 @@ const endpoint = 'http://localhost:3000/agendas'
       alert('Erro ao gravar novo contato')
     }
   })
+
+  Método: PUT
+
+  const dados = {
+        'id': document.getElementById('f_idEditar').value,
+        'produto': document.getElementById('f_produtoEditar').value,
+        'marca': document.getElementById('f_marcaEditar').value,
+        'modelo': document.getElementById('f_modeloEditar').value
+      }
+      const endpoint = `http://localhost:3000/produtos/${id}`
+      const options = {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dados)
+    }
+      const response = await fetch(endpoint, options)
+      // alert(response)
+      return response

@@ -10,13 +10,37 @@ const f_dtnasc = document.querySelector('#f_dtnasc')
 
 btn_gravar.addEventListener('click', (evt) => {
   fundopopup.classList.add('ocultar')
-  console.log(f_id.value, 'ID')
-  console.log(f_nome.value, 'Nome')
+  // console.log(f_id.value, 'ID')
+  // console.log(f_nome.value, 'Nome')
   // f_id.value = dados[0].innerHTML
   // f_nome.value = dados[1].innerHTML
   // f_celular.value = dados[2].innerHTML
   // f_email.value = dados[3].innerHTML
   // f_dtnasc.value = dados[4].innerHTML
+  // const id = dados[0].innerHTML
+  const id = f_id.value
+  console.log(id, 'idgravar')
+  const dadosEditar = {
+    'nome': f_nome.value,
+    'celular': f_celular.value,
+    'email': f_email.value,
+    'date': f_dtnasc.value,
+  }
+  console.log(dadosEditar, 'dadosEditar2')
+  const endpoint = `http://localhost:3000/agendas/${id}`
+  const options = {
+    method: "PUT",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dadosEditar)
+}
+  const response = fetch(endpoint, options)
+  // alert(response)
+console.log(response, 'response')
+alert('ok')
+return response
+
 })
 
 btn_cancelar.addEventListener('click', (evt) => {
