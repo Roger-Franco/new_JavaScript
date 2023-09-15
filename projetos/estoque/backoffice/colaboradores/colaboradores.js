@@ -5,6 +5,8 @@ const btn_fecharPopup = document.querySelector('#btn_fecharPopup')
 const btn_gravarPopup = document.querySelector('#btn_gravarPopup')
 const btn_cancelarPopup = document.querySelector('#btn_cancelarPopup')
 const f_tipoColab = document.querySelector('#f_tipoColab')
+const f_telefone = document.querySelector('#f_telefone')
+const telefones = document.querySelector('#telefones')
 
 const endpoint_todosColaboradores = 'http://localhost:3000/colaboradores'
 
@@ -74,4 +76,26 @@ btn_gravarPopup.addEventListener('click', (evt) => {
 
 btn_cancelarPopup.addEventListener('click', (evt) => {
   novoColaborador.classList.add('ocultarPopup')
+})
+
+f_telefone.addEventListener('keyup', (evt) => {
+  if(evt.key == "Enter"){
+    const divTel = document.createElement('div')
+    divTel.setAttribute('class', 'tel')
+
+    const divNumTel = document.createElement('div')
+    divNumTel.setAttribute('class', 'numTel')
+    divNumTel.innerHTML = evt.target.value
+    divTel.appendChild(divNumTel)
+    
+    const imgDelTel = document.createElement('img')
+    imgDelTel.setAttribute('class', 'delTel')
+    imgDelTel.setAttribute('src', '../../imgs/deletar.svg')
+    imgDelTel.innerHTML = evt.target.value
+
+    divTel.appendChild(imgDelTel)
+    telefones.appendChild(divTel)
+
+    evt.target.value = ''
+  }
 })
