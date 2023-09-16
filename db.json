@@ -122,31 +122,75 @@
       "id": "01",
       "nome": "Processador",
       "tipo": "Intel",
-      "status": "I7"
+      "status": "Ativo",
+      "telefones": "I7"
     },
     {
       "id": "02",
       "nome": "Mouse",
       "tipo": "Logitech",
-      "status": "m90"
+      "status": "Ativo",
+      "telefones": "m90"
     },
     {
       "id": "03",
       "nome": "Monitor",
       "tipo": "Sansung",
-      "status": "Syncmaster"
+      "status": "Ativo",
+      "telefones": "Syncmaster"
     },
     {
       "id": "04",
       "nome": "Imporessora",
       "tipo": "HP",
-      "status": "P1005"
+      "status": "Ativo",
+      "telefones": "P1005"
     },
     {
       "id": "05",
       "nome": "Drone",
       "tipo": "DJI",
-      "status": "Mini 3 Pro"
+      "status": "Ativo",
+      "telefones": "Mini 3 Pro"
+    },
+    {
+      "nome": "teste4",
+      "tipo": "01",
+      "status": "A",
+      "telefones": [],
+      "id": "jzT5eYI"
+    },
+    {
+      "nome": "thu",
+      "tipo": "01",
+      "status": "A",
+      "telefones": [
+        "1111",
+        "123123",
+        "12341234"
+      ],
+      "id": "2Ie9NjF"
+    },
+    {
+      "nome": "thu2",
+      "tipo": "01",
+      "status": "A",
+      "telefones": [
+        "321321",
+        "123123",
+        "3333"
+      ],
+      "id": "RaMIZXq"
+    },
+    {
+      "nome": "rog",
+      "tipo": "01",
+      "status": "A",
+      "telefones": [
+        "444444",
+        "55555"
+      ],
+      "id": "t4MWKAG"
     }
   ],
   "Tipos": [

@@ -4,9 +4,11 @@ const novoColaborador = document.querySelector('#novoColaborador')
 const btn_fecharPopup = document.querySelector('#btn_fecharPopup')
 const btn_gravarPopup = document.querySelector('#btn_gravarPopup')
 const btn_cancelarPopup = document.querySelector('#btn_cancelarPopup')
-const f_tipoColab = document.querySelector('#f_tipoColab')
 const f_telefone = document.querySelector('#f_telefone')
 const telefones = document.querySelector('#telefones')
+const f_nome = document.querySelector('#f_nome')
+const f_tipoColab = document.querySelector('#f_tipoColab')
+const f_status = document.querySelector('#f_status')
 
 const endpoint_todosColaboradores = 'http://localhost:3000/colaboradores'
 
@@ -71,6 +73,37 @@ btn_fecharPopup.addEventListener('click', (evt) => {
 })
 
 btn_gravarPopup.addEventListener('click', (evt) => {
+  const tels = [...document.querySelectorAll(".numTel")];
+  // console.log(tels)
+  let numTels = []
+  tels.forEach(t => {
+    numTels.push(t.innerHTML)
+  })
+  // console.log(numTels)
+  const dados = {
+    nome: f_nome.value,
+    tipo: f_tipoColab.value,
+    status: f_status.value,
+    telefones:numTels
+  }
+  console.log(dados)
+  const options = {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dados)
+}
+const endpoint = 'http://localhost:3000/colaboradores'
+  fetch(endpoint, options)
+  .then(res => {
+    if(res.status == 201) {
+      alert("Gravação de novo colaborador com sucesso!")
+    } else {
+      alert('Erro ao gravar novo contato')
+    }
+  })
+
   novoColaborador.classList.add('ocultarPopup')
 })
 
@@ -80,6 +113,7 @@ btn_cancelarPopup.addEventListener('click', (evt) => {
 
 f_telefone.addEventListener('keyup', (evt) => {
   if(evt.key == "Enter"){
+    if(evt.target.value.length >= 8) {
     const divTel = document.createElement('div')
     divTel.setAttribute('class', 'tel')
 
@@ -91,11 +125,19 @@ f_telefone.addEventListener('keyup', (evt) => {
     const imgDelTel = document.createElement('img')
     imgDelTel.setAttribute('class', 'delTel')
     imgDelTel.setAttribute('src', '../../imgs/deletar.svg')
-    imgDelTel.innerHTML = evt.target.value
+    // imgDelTel.innerHTML = evt.target.value
+    imgDelTel.addEventListener('click', (evt) => {
+      // console.log(evt.target.parentNode)
+      evt.target.parentNode.remove()
+    })
 
     divTel.appendChild(imgDelTel)
     telefones.appendChild(divTel)
 
     evt.target.value = ''
+    } else {
+      alert('Número de telefone inválido')
+    }
+    
   }
 })
