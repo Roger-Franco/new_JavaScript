@@ -19,10 +19,14 @@
   <div id="novoColaborador" class="popup ocultarPopup">
     <div class="janelaPopup">
       <div class="tituloPopup">
-        <div>Novo Colaborador</div>
+        <div id="tituloPopup">Novo Colaborador</div>
         <img src="../../imgs/close.svg" class="btn_janelaOper" id="btn_fecharPopup" alt="Fechar Popup">
       </div>
       <div class="corpoPopup">
+        <div style="display:none" class="campoForm">
+          <label>id</label>
+          <input type="text" id="f_id" name="f_id">
+        </div>
         <div class="campoForm">
           <label>Nome Colaborador</label>
           <input type="text" id="f_nome" name="f_nome">
@@ -44,7 +48,7 @@
           <label>Foto</label>
             <input type="file" name="f_foto" id="f_foto" accept="image/png, image/jpeg, image/jpg">
         </div>
-        <div class="campoForm">
+        <div class="campoForm2">
           <img src="#" id="img_foto" class="img_foto">
         </div>
         <div class="campoForm">
@@ -66,25 +70,27 @@
     
   </div>
 
-  <div id="grid" class="grid">
-  <div id="tituloGrid" class="tituloGrid">
-    <div class="colunaTituloGrid c1">ID</div>
-    <div class="colunaTituloGrid c2">Nome</div>
-    <div class="colunaTituloGrid c3">Tipo</div>
-    <div class="colunaTituloGrid c4">Status</div>
-    <div class="colunaTituloGrid c5">Operações</div>
+  <div id="areaGrid" class="areaGrid">
+    <div id="grid" class="grid">
+      <div id="tituloGrid" class="tituloGrid">
+        <div class="colunaTituloGrid c1">ID</div>
+        <div class="colunaTituloGrid c2">Nome</div>
+        <div class="colunaTituloGrid c3">Tipo</div>
+        <div class="colunaTituloGrid c4">Status</div>
+        <div class="colunaTituloGrid c5">Operações</div>
+      </div>
+      <div id="dadosGrid" class="dadosGrid">
+        <!-- <div id="linhaGrid" class="linhaGrid">
+          <div class="colunaLinhaGrid c1">ID</div>
+          <div class="colunaLinhaGrid c2">Nome</div>
+          <div class="colunaLinhaGrid c3">Tipo</div>
+          <div class="colunaLinhaGrid c4">Status</div>
+          <div class="colunaLinhaGrid c5">Operações</div>
+        </div> -->
+      </div>
+    </div>
   </div>
-  <div id="dadosGrid" class="dadosGrid">
-    <!-- <div id="linhaGrid" class="linhaGrid">
-      <div class="colunaLinhaGrid c1">ID</div>
-      <div class="colunaLinhaGrid c2">Nome</div>
-      <div class="colunaLinhaGrid c3">Tipo</div>
-      <div class="colunaLinhaGrid c4">Status</div>
-      <div class="colunaLinhaGrid c5">Operações</div>
-    </div> -->
-  </div>
-
-  </div>
+  
   
   <script src="colaboradores.js" type="module"></script>
   <script src="../../estoque_geral.js" type="module"></script>
