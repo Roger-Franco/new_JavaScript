@@ -84,7 +84,7 @@ const endpoint = 'http://localhost:3000/agendas'
       const options = {
         method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'applicatio/json',
         },
         body: JSON.stringify(dados)
     }
@@ -93,7 +93,7 @@ const endpoint = 'http://localhost:3000/agendas'
       return response
 
 
-Aula 204/ video 207
+Aula 207/ video 210
 
-https://www.youtube.com/watch?v=-_FiTc4ZAM0&list=PLx4x_zx8csUg_AxxbVWHEyAJ6cBdsYc0T&index=207
+https://www.youtube.com/watch?v=yUzYUDO3aaw&list=PLx4x_zx8csUg_AxxbVWHEyAJ6cBdsYc0T&index=209
 
